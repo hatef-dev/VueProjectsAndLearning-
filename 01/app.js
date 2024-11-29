@@ -5,10 +5,11 @@ const app = Vue.createApp({
             lastName: "Sanati"
             
         }
+    },
+    methods: {
+        fullName() {
+            return this.firstName+ " " + this.lastName.toUpperCase();
+        }
     }
 }).mount('#app')
 
-setTimeout(() => {
-    app.firstName = "Bob";
-    //proxies 
-}, 2000)
