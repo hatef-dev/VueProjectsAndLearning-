@@ -7,10 +7,14 @@
   <body>
     <div id="app" v-cloak>
       <!-- v-cloak is directives  -->
-      <h1>{{ fullName() }}</h1> 
-       
-      <!-- expersions just we excepted we cant use decolartions or functions or conditions -->
-       <!-- string interpolation is the procss of replacing placeholder into string value -->
+      <h1>{{ fullName() }}</h1>
+      <hr />
+
+      <label for="">FirstName</label>
+      <input type="text" v-model="firstName" />
+      <label for="">LastName</label>
+      <input type="text" v-model="lastName" />
+      
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
