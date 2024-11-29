@@ -1,4 +1,4 @@
-Vue.createApp({
+const app = Vue.createApp({
     data() {
         return{
             firstName: "Hatef",
@@ -8,12 +8,7 @@ Vue.createApp({
     }
 }).mount('#app')
 
-
-Vue.createApp({
-    data() {
-        return{
-            firstName: "Haniye",
-            lastName: "Sadeghi"
-        }
-    }
-}).mount('#app2')
+setTimeout(() => {
+    app.firstName = "Bob";
+    //proxies 
+}, 2000)
