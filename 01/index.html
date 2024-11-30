@@ -10,12 +10,12 @@
       <h1>{{ fullName() }}</h1>
       <hr />
       <a :href="url">Google</a>
+      <p v-html="raw_html"></p>
 
       <label for="">FirstName</label>
       <input type="text" v-model="firstName" />
       <label for="">LastName</label>
       <input type="text" v-model="lastName" />
-      
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
