@@ -15,11 +15,18 @@
 
       <button @click="age++">inc</button>
       <button @click="age--">dec</button>
-      <hr>
-      <label for="">FirstName</label>
-      <input type="text" v-model="firstName" />
-      <label for="">LastName</label>
-      <input type="text" :value="lastName" @input="changeLastName('lastname is changed', $event)" />
+      <hr />
+      <form @submit.prevent="">
+        <label for="">FirstName</label>
+        <input type="text" v-model="firstName" />
+        <label for="">LastName</label>
+        <input
+          type="text"
+          :value="lastName"
+          @input.prevent="changeLastName('lastname is changed', $event)"
+        />
+        <button type="submit">Submit</button>
+      </form>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
