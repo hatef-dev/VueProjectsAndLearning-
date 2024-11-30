@@ -4,13 +4,17 @@ const app = Vue.createApp({
             firstName: "Hatef",
             lastName: "Sanati",
             url: "https://google.com",
-            raw_html: '<a href="https://bing.com">Bing</a>'
+            raw_html: '<a href="https://bing.com">Bing</a>',
+            age: 22,
             
         }
     },
     methods: {
         fullName() {
             return this.firstName+ " " + this.lastName.toUpperCase();
+        },
+        changeLastName(e){
+            this.lastName = e.target.value;
         }
     }
 }).mount('#app')

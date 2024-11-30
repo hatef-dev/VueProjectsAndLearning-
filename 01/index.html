@@ -11,11 +11,15 @@
       <hr />
       <a :href="url">Google</a>
       <p v-html="raw_html"></p>
+      <p>{{ age }}</p>
 
+      <button @click="age++">inc</button>
+      <button @click="age--">dec</button>
+      <hr>
       <label for="">FirstName</label>
       <input type="text" v-model="firstName" />
       <label for="">LastName</label>
-      <input type="text" v-model="lastName" />
+      <input type="text" :value="lastName" @input="changeLastName" />
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
