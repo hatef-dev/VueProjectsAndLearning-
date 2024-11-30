@@ -2,7 +2,8 @@ const app = Vue.createApp({
     data() {
         return{
             firstName: "Hatef",
-            lastName: "Sanati"
+            lastName: "Sanati",
+            url: "https://google.com"
             
         }
     },
