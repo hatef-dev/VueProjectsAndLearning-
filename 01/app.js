@@ -13,7 +13,9 @@ const app = Vue.createApp({
         fullName() {
             return this.firstName+ " " + this.lastName.toUpperCase();
         },
-        changeLastName(e){
+        changeLastName(msg,e){
+            console.log(msg)
+            console.log(e)
             this.lastName = e.target.value;
         }
     }
