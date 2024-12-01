@@ -11,17 +11,18 @@
       <hr />
       <a :href="url">Google</a>
       <p v-html="raw_html"></p>
-      <p>{{ age }}</p>
+      <p>{{ typeof age }}</p>
 
       <button @click.="age++">inc</button>
       <button @click="age--">dec</button>
       <hr />
       <form @submit.prevent="">
         <label for="">FirstName</label>
-        <input type="text" v-model="firstName" />
+        <input type="text" v-model.lazy.trim="firstName" />
         <label for="">middle name</label>
-        <input type="text" @keyup.enter="addTomiddleName" />
-
+        <input type="text" v-model.lazy.trim @keyup.enter="addTomiddleName" />
+        <label for="">age</label>
+        <input type="text" v-model.number="age" />
         <label for="">LastName</label>
         <input
           type="text"
