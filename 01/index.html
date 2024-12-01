@@ -13,17 +13,20 @@
       <p v-html="raw_html"></p>
       <p>{{ age }}</p>
 
-      <button @click="age++">inc</button>
+      <button @click.="age++">inc</button>
       <button @click="age--">dec</button>
       <hr />
       <form @submit.prevent="">
         <label for="">FirstName</label>
         <input type="text" v-model="firstName" />
+        <label for="">middle name</label>
+        <input type="text" @keyup.enter="addTomiddleName" />
+
         <label for="">LastName</label>
         <input
           type="text"
           :value="lastName"
-          @input.prevent="changeLastName('lastname is changed', $event)"
+          @input="changeLastName('lastname is changed', $event)"
         />
         <button type="submit">Submit</button>
       </form>
