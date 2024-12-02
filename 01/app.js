@@ -7,6 +7,7 @@ const app = Vue.createApp({
             url: "https://google.com",
             raw_html: '<a href="https://bing.com">Bing</a>',
             age: 22,
+            selectedOptions: ''
             
         }
     },
@@ -23,7 +24,8 @@ const app = Vue.createApp({
         },
         addTomiddleName(e){
             this.middleName = e.target.value
-        } 
+        }, 
+        
     },
     computed: {
         fullNameC() {

@@ -32,7 +32,26 @@
         />
         <button type="submit">Submit</button>
       </form>
+      <div>
+        <select v-model="selectedOptions">
+          <option value="">Black</option>
+          <option value="text_yellow">Yellow</option>
+          <option value="text_green">Green</option>
+        </select>
+        <h2 :class="selectedOptions">Text color</h2>
+      </div>
+      
+
+      <div>
+        <hr>
+
+        <hr>
+        <p v-if="selectedOptions == 'text_yellow'">v-if</p>
+        <p v-else-if="selectedOptions == 'text_green'">v-else-if</p>
+        <p v-else>v-else</p>
+      </div>
     </div>
+    <hr>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
   </body>

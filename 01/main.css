@@ -9,3 +9,13 @@ input[type="text"] {
 [v-cloak]{
   display: none;
 }
+
+.text_black{
+  color: black;
+}
+.text_yellow{
+  color: yellow
+}
+.text_green {
+  color: green;
+}
