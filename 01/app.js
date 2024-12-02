@@ -30,6 +30,11 @@ const app = Vue.createApp({
             console.log("it's work from computed")
             return `${this.firstName} ${this.middleName} ${this.lastName}`;
         }
+    },
+    watch: {
+        age(newVal, oldVal) {
+            console.log(newVal+ oldVal)      
+        }
     }
 }).mount('#app')
 
