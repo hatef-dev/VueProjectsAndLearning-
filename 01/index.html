@@ -42,6 +42,14 @@
       </div>
       
 
+      <ul>
+        <li v-for="person in people" :key="person.name">
+          
+          {{person.name}}
+        </li>
+      </ul>
+
+
       <div>
         <hr>
         <p v-show="selectedOptions == 'text_yellow'">v-if</p>
