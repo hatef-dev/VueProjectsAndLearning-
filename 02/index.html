@@ -12,25 +12,26 @@
     <main>
       <section class="settings">
         <div class="settings-container">
-          <label>perspective: 0px;</label>
-          <input type="range" v-model="perspective" min="0" max="999" />
+          <label>perspective: {{perspective}};</label>
+          <input type="range" v-model="perspective" min="0" max="100
+          " />
 
-          <label>rotateX: 0deg; </label>
-          <input type="range" v-model="rotateX" min="-180" max="180" />
+          <label>rotateX: {{rotateX}}; </label>
+          <input type="range"  v-model="rotateX" min="-180" max="180" />
 
-          <label>rotateY: 0deg; </label>
+          <label>rotateY: {{rotateY}}; </label>
           <input type="range" v-model="rotateY" min="-180" max="180" />
 
-          <label>rotateZ: 0deg; </label>
+          <label>rotateZ: {{rotateZ}}; </label>
           <input type="range" v-model="rotateZ" min="-180" max="180" />
 
-          <button type="button">Reset</button>
-          <button type="button">Copy</button>
+          <button type="button" @click.prevent="reset">Reset</button>
+          <button type="button" @click.prevent="copy">Copy</button>
         </div>
       </section>
       <section class="output">
         <div class="box-container">
-          <div class="box"></div>
+          <div class="box"  :style="box" ></div>
         </div>
       </section>
     </main>
